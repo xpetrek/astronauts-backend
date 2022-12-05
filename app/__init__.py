@@ -18,9 +18,9 @@ def create_app():
     # app.config['FLASK_ADMIN_SWATCH'] = 'cerulean'
     app.config['SQLALCHEMY_DATABASE_URI'] = 'sqlite:///database.db'
     # app.config['SQLALCHEMY_DATABASE_URI'] = 'postgresql-dimensional-76949'
-    # app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = True
-    # app.config['SECRET_KEY'] = 'qwertyuiopasdfghjklzxcvbnm'
-    # app.config['DEBUG_TB_INTERCEPT_REDIRECTS'] = False
+    app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = True
+    app.config['SECRET_KEY'] = 'qwertyuiopasdfghjklzxcvbnm'
+    app.config['DEBUG_TB_INTERCEPT_REDIRECTS'] = False
 
     ###### init extensions ########
     db.init_app(app)
@@ -32,6 +32,8 @@ def create_app():
     app.register_blueprint(astronauts_blueprint)
     # from app.frontend import bp_frontend as frontend_blueprint
     # app.register_blueprint(frontend_blueprint)    
-    db.create_all()
-    
+    # if not os.path.exists(app.config['SQLALCHEMY_DATABASE_URI']):
+    #     db.app = app
+    #     db.create_all()
+
     return app

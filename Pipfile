@@ -18,6 +18,7 @@ flask-socketio = "*"
 flask-swagger-ui = "*"
 flask-restful-swagger = "*"
 gunicorn = "*"
+marshmallow-sqlalchemy = "*"
 
 [dev-packages]
 
