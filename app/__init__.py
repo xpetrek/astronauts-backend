@@ -32,5 +32,6 @@ def create_app():
     app.register_blueprint(astronauts_blueprint)
     # from app.frontend import bp_frontend as frontend_blueprint
     # app.register_blueprint(frontend_blueprint)    
+    db.create_all()
     
     return app
