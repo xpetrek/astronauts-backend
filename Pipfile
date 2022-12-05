@@ -1,0 +1,25 @@
+[[source]]
+url = "https://pypi.org/simple"
+verify_ssl = true
+name = "pypi"
+
+[packages]
+flask = "*"
+pytest = "*"
+flask-debugtoolbar = "*"
+flask-sqlalchemy = "*"
+marshmallow = "==3.11.1"
+flask-marshmallow = "*"
+flask-restful = "*"
+flask-cors = "*"
+flask-httpauth = "==4.2.0"
+flask-login = "*"
+flask-socketio = "*"
+flask-swagger-ui = "*"
+flask-restful-swagger = "*"
+gunicorn = "*"
+
+[dev-packages]
+
+[requires]
+python_version = "3.9"
